@@ -14,8 +14,8 @@ def hash_password(original_password):
 # 입력한 비밀번호가 암호화된 비번과 맞는지
 # 체크하는 함수!
 
-def check_password(original_password,hashed_password):
+def check_password(original_password, hashed_password):
     original_password = original_password + Config.PASSWORD_SALT
-    check = pbkdf2_sha256.verify(original_password, hash_password)
-    return check 
+    check = pbkdf2_sha256.verify(original_password, hashed_password)
+    return check
 
