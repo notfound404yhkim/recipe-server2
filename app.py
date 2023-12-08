@@ -33,8 +33,8 @@ def check_if_token_is_revoked(jwt_header,jwt_payload):
 # API를 구분해서 실행시키는 것은,
 # HTTP METHOD 와 URL의 조합 이다.
 
-# 경로(path)와 리소스(API 코드) 를 연결한다.
-api.add_resource(RecipeListResource ,'/recipes')
+# 경로(path)와 리소스(API 코드) 를 연결한다. 
+api.add_resource(RecipeListResource ,'/recipes')  #레시피 생성 
 
 api.add_resource(RecipeResource  , '/recipes/<int:recipe_id>') # 경로 변수화(숫자형식) 
 
